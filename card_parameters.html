@@ -20,7 +20,14 @@ htlm_card =
                     </td>
                     <td>"& [dados] &"</td>
                     <td>pH</td>
-                    <td>"& [dados] &"</p>
+                    <td>
+                        "& ABS([status_ph]) &"
+                        "& IF([status_ph] > 0, 
+                            "<span style='font-size: 1.2em; color: green;'>&#9650;</span>", 
+                            IF([status_ph] < 0, 
+                                "<span style='font-size: 1.2em; color: red;'>&#9660;</span>", 
+                                "")) 
+                        &"
                     </td>
                 </tr>
                 <tr>
@@ -30,7 +37,15 @@ htlm_card =
                     </td>
                     <td>"& [dados] &"</td>
                     <td>mg/l</td>
-                    <td>"& [dados] &"</td>
+                    <td>
+                        "& ABS([status_cloro]) &"
+                        "& IF([status_cloro] > 0, 
+                            "<span style='font-size: 1.2em; color: green;'>&#9650;</span>", 
+                            IF([status_cloro] < 0, 
+                                "<span style='font-size: 1.2em; color: red;'>&#9660;</span>", 
+                                "")) 
+                        &"
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -39,7 +54,14 @@ htlm_card =
                     </td>
                     <td>"& [dados] &"</td>
                     <td>°C</td>
-                    <td>"& [dados] &"</span>
+                    <td>
+                        "& ABS([status_temperatura]) &"
+                        "& IF([status_temperatura] > 0, 
+                            "<span style='font-size: 1.2em; color: green;'>&#9650;</span>", 
+                            IF([status_temperatura] < 0, 
+                                "<span style='font-size: 1.2em; color: red;'>&#9660;</span>", 
+                                "")) 
+                        &"
                     </td>
                 </tr>
             </tbody>
